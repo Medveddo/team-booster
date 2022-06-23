@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  front:
+    image: tmbster-front
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:3000:3000"
