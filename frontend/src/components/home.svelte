@@ -6,6 +6,7 @@
 		<img
 			src="https://api.lorem.space/image/movie?w=260&h=400"
 			class="max-w-sm rounded-lg shadow-2xl"
+			alt="Random"
 		/>
 		<div>
 			<h1 class="text-5xl font-bold">Boost your team skills!</h1>
