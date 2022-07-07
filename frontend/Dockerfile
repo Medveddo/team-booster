@@ -12,4 +12,5 @@ RUN npm run build
 
 # Web server serves static
 FROM caddy:2.4.6
-COPY --from=build /usr/src/app/build /srv
+COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
+COPY --from=build /usr/src/app/build /usr/share/caddy/
