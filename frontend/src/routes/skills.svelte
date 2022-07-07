@@ -1,25 +1,28 @@
-<script>
-    let skills = [];
-	const fetchData = async () => {
-		const url = 'http://localhost:8000/';
-		const resp = await fetch(url);
-		const data = await resp.json();
+<script lang="ts">
+	import { API } from '../api/api';
+	import type { Skill } from '../api/entities';
+
+	let skills: Array<Skill> = [];
+
+	API.fetchRoot().then((data: Array<Skill>) => {
 		console.log(data);
-        skills = data;
-	};
-    fetchData();
+		skills = data;
+	});
 </script>
 
 {#each skills as s}
-    <h1>{s.name}</h1>
-    {#each s.levels as l}
-        <h2>____{l.level}</h2>
-        {#each l.achievements as a}
-            <h3>_________{a.description}</h3>
-        {/each}
-        <br>
-        {#each l.chalenges as c}
-            <h3>_________{c.description}</h3>
-        {/each}
-    {/each}
+	<h1>{s.name}</h1>
+	{#each s.levels as l}
+		<h2>__{l.level}</h2>
+		{#each l.achievements as a}
+			<h3>___{a.description}</h3>
+            {#each a.resources as r}
+            <h4>____{r.location}</h4>
+            {/each}
+		{/each}
+		<br />
+		{#each l.chalenges as c}
+			<h3>___{c.description}</h3>
+		{/each}
+	{/each}
 {/each}

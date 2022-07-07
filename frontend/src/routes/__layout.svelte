@@ -2,6 +2,10 @@
 	import Navbar from '../components/navbar.svelte';
 </script>
 
+<svelte:head>
+	<title>TeamBooster</title>
+</svelte:head>
+
 <Navbar />
 <slot />
 
