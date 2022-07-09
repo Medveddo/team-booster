@@ -43,19 +43,19 @@ var chalenge2 Chalenge = Chalenge{
 }
 
 var beginner_level Level = Level{
-	Level:        BEGINNER_LEVEL,
+	Level:        LevelBeginner,
 	Achievements: []Achievement{achievement, achievement2},
 	Chalenges:    []Chalenge{chalenge, chalenge2},
 }
 
 var inter_level Level = Level{
-	Level: INTERMEDIATE_LEVEL,
+	Level: LevelIntermediate,
 	Achievements: []Achievement{},
 	Chalenges:    []Chalenge{},
 }
 
 var advanced_level = Level{
-	Level:        ADVANCED_LEVEL,
+	Level:        LevelAdvanced,
 	Achievements: []Achievement{},
 	Chalenges:    []Chalenge{},
 }
